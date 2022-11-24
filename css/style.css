@@ -22,6 +22,8 @@
 body,
 button,
 input,
+select,
+option,
 a {
 	font-family: 'Montserrat', sans-serif;
 }
@@ -61,4 +63,93 @@ body {
 
 .fa-solid {
 	font-size: 3.2rem;
+}
+
+.form {
+	margin: 1rem 0;
+}
+
+.form__title-box {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.form__title {
+	position: relative;
+	display: inline-block;
+	padding: 0.25em 0;
+	font-size: 2.2rem;
+}
+
+.form__title::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 20%;
+	right: 20%;
+	height: 2px;
+	background-color: var(--blue);
+	transition: 0.2s;
+}
+
+.form__title:hover::before {
+	left: 0;
+	right: 0;
+}
+
+.form__register-fields,
+.form__operation-fields {
+	margin: 2.5rem 0;
+}
+
+.form__register-fields {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 2rem;
+}
+
+.form__field {
+	display: flex;
+	flex-direction: column;
+}
+
+.form__label {
+	margin-bottom: 0.5em;
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+.form__input,
+.form__select {
+	border: 1px solid var(--black);
+	padding: 0.3em;
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+.form__input:focus {
+	outline: 0;
+}
+
+.form__operation-fields {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+	gap: 1.5rem;
+}
+
+.form__button {
+	width: 100%;
+	border: none;
+	padding: 0.5em;
+	background-color: var(--blue);
+	color: var(--white);
+	font-size: 1.5rem;
+	font-weight: 500;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.form__button:hover {
+	background-color: #0355b7;
 }
