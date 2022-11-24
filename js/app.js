@@ -10,7 +10,15 @@ const executeOperation = (e) => {
 	if (operation === 'mov') {
 		e.target[`${firstSelectedRegister.toLowerCase()}`].value = e.target[`${secondSelectedRegister.toLowerCase()}`].value;
 	} else {
-		// XCHG Operation
+		// XCHG operation
+
+		const firstRegister = e.target[`${firstSelectedRegister.toLowerCase()}`].value;
+
+		const secondRegister = e.target[`${secondSelectedRegister.toLowerCase()}`].value;
+
+		e.target[`${firstSelectedRegister.toLowerCase()}`].value = secondRegister;
+
+		e.target[`${secondSelectedRegister.toLowerCase()}`].value = firstRegister;
 	}
 };
 
