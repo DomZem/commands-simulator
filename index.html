@@ -11,6 +11,79 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 		<!-- Main style -->
 		<link rel="stylesheet" href="css/style.css" />
+		<!-- Scripts -->
+		<script src="js/app.js" defer></script>
 	</head>
-	<body></body>
+	<body>
+		<div class="app">
+			<header class="header">
+				<span class="fa-sharp fa-solid fa-microchip"></span>
+				<h1 class="header__title">Intel 8086</h1>
+			</header>
+
+			<form class="form">
+				<div class="form__title-box">
+					<h2 class="form__title">Registers</h2>
+				</div>
+
+				<div class="form__register-fields">
+					<div class="form__field">
+						<label class="form__label" for="ax">AX</label>
+						<input class="form__input" type="text" id="ax" name="ax" maxlength="4" placeholder="AX register" />
+					</div>
+
+					<div class="form__field">
+						<label class="form__label" for="bx">BX</label>
+						<input class="form__input" type="text" id="bx" name="bx" maxlength="4" placeholder="BX register" />
+					</div>
+
+					<div class="form__field">
+						<label class="form__label" for="cx">CX</label>
+						<input class="form__input" type="text" id="cx" name="cx" maxlength="4" placeholder="CX register" />
+					</div>
+
+					<div class="form__field">
+						<label class="form__label" for="dx">DX</label>
+						<input class="form__input" type="text" id="dx" name="dx" maxlength="4" placeholder="DX register" />
+					</div>
+				</div>
+
+				<div class="form__title-box">
+					<h2 class="form__title">Operations</h2>
+				</div>
+
+				<div class="form__operation-fields">
+					<div class="form__field">
+						<label class="form__label" for="operation">Operation</label>
+						<select class="form__select" id="operation" name="operation">
+							<option value="mov">MOV</option>
+							<option value="xchg">XCHG</option>
+						</select>
+					</div>
+
+					<div class="form__field">
+						<label class="form__label" for="firstRegister">Register 1</label>
+						<select class="form__select" id="firstRegister" name="firstRegister">
+							<option value="ax" selected>AX</option>
+							<option value="bx">BX</option>
+							<option value="cx">CX</option>
+							<option value="dx">DX</option>
+						</select>
+					</div>
+
+					<div class="form__field">
+						<label class="form__label" for="secondRegister">Register 2</label>
+						<select class="form__select" id="secondRegister" name="secondRegister">
+							<option value="ax">AX</option>
+							<option value="bx" selected>BX</option>
+							<option value="cx">CX</option>
+							<option value="dx">DX</option>
+						</select>
+					</div>
+				</div>
+
+				<button class="form__button" type="submit">Confim operation</button>
+			</form>
+		</div>
+	</body>
 </html>
